@@ -1,0 +1,89 @@
+:root {
+  --primaryColor: #dabfff;
+  --secondaryColor: #4f518c;
+  --textColor: #907ad6;
+  --lightColor: #7fdeff;
+  --darkColor: #2c2a4a;
+}
+
+@font-face {
+  font-family: "vazir";
+  src: url("/fonts/vazir.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: vazir;
+  font-weight: normal;
+  direction: rtl;
+  text-align: right;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: inherit;
+  position: relative;
+}
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--darkColor);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--lightColor);
+  border-radius: 25px;
+  box-shadow: 0 0 5px var(--lightColor);
+}
+section {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  font-size: 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#id-1 {
+  background-color: var(--darkColor);
+}
+#id-2 {
+  background-color: var(--lightColor);
+}
+#id-3 {
+  background-color: var(--primaryColor);
+}
+#id-4 {
+  background-color: var(--secondaryColor);
+}
+#id-5 {
+  background-color: var(--textColor);
+}
+.arrow {
+  text-decoration: none;
+  position: fixed;
+  bottom: -100%;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+.arrow.active {
+  bottom: 25px;
+  opacity: 1;
+}
